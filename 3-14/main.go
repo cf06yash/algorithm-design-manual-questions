@@ -158,6 +158,10 @@ func (ll *DoubleLinkedList) Traverse() []*ListNode {
 }
 
 func main() {
+	/*
+		Given two binary search trees, merge them into a doubly linked list in sorted
+		order.
+	*/
 	a := &BST{}
 	b := &BST{}
 	for i := 0; i < 30; i++ {

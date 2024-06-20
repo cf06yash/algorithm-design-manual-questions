@@ -136,6 +136,10 @@ func (t *BST) Correction() {
 }
 
 func main() {
+	/*
+		Two elements of a binary search tree have been swapped by mistake. Give
+		an O(n) algorithm to identify these two elements so they can be swapped back.
+	*/
 	t := &BST{}
 	arr := []int{3, 4, 6, 7, 9, 1, 2, 8, 5, 0}
 	for i := 0; i < 10; i++ {
