@@ -26,7 +26,7 @@ func NewTree() *AVLTree {
 
 func getHeight(node *Node) int {
 	if node == nil {
-		return -1
+		return 0
 	}
 	return node.height
 }
@@ -147,7 +147,7 @@ func (t *AVLTree) Insert(key int) {
 		left:   nil,
 		right:  nil,
 		val:    key,
-		height: 0,
+		height: 1,
 	}
 	if t.root == nil {
 		t.root = n

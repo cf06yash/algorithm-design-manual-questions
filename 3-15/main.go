@@ -54,7 +54,7 @@ func balance(root, n *Node) *Node {
 
 func getHeight(node *Node) int {
 	if node == nil {
-		return -1
+		return 0
 	}
 	return node.height
 }
@@ -118,7 +118,7 @@ func (t *AvlTree) Print() {
 
 func (t *AvlTree) Insert(val int) {
 	var n *Node = &Node{
-		height:        0,
+		height:        1,
 		balanceFactor: 0,
 		left:          nil,
 		right:         nil,

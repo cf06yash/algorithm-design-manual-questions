@@ -92,17 +92,18 @@ func getBalanceFactor(n *Node) int {
 
 func getHeight(n *Node) int {
 	if n == nil {
-		return -1
+		return 0
 	}
 	return n.height
 }
 
 func (t *AVLTree) Add(key int, value string) {
 	n := &Node{
-		key:   key,
-		value: value,
-		left:  nil,
-		right: nil,
+		key:    key,
+		value:  value,
+		left:   nil,
+		right:  nil,
+		height: 1,
 	}
 	if t.root == nil {
 		t.root = n

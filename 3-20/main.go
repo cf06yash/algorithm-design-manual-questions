@@ -16,7 +16,7 @@ type AVLTree struct {
 
 func getHeight(root *Node) int {
 	if root == nil {
-		return -1
+		return 0
 	}
 	return root.height
 }
@@ -110,7 +110,7 @@ func (t *AVLTree) Add(key int) {
 	var n *Node = &Node{
 		left:   nil,
 		right:  nil,
-		height: 0,
+		height: 1,
 		size:   1,
 		key:    key,
 	}
@@ -137,7 +137,7 @@ func deleteNodeKth(root *Node, k int) *Node {
 	}
 	lsize := size(root.left)
 
-	if k < lsize+1 {
+	if k <= lsize {
 		root.left = deleteNodeKth(root.left, k)
 	} else if k > lsize+1 {
 		root.right = deleteNodeKth(root.right, k-lsize-1)
