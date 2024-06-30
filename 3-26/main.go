@@ -69,6 +69,15 @@ func constructTree(arr *[]int) *SegmentTree {
 }
 
 func main() {
+	/*
+		Suppose that we are given a sequence of n values x1, x2, ..., xn and seek to
+		quickly answer repeated queries of the form: given i and j, find the smallest
+		value in xi,...,xj .
+
+		(b) Design a data structure that uses O(n) space and answers queries in
+		O(log n) time. For partial credit, your data structure can use O(n log n)
+		space and have O(log n) query time.
+	*/
 	var arr []int = []int{1, 3, 2, 7, 9, 11, 4, 5, 6, 8, 10}
 	t := constructTree(&arr)
 	fmt.Printf("Tree: %v\n", t.tree)
