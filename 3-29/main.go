@@ -75,6 +75,7 @@ func searchIdxToInsert(arr *[]*Pair, key, l, r int) int {
 		return searchIdxToInsert(arr, key, l, mid-1)
 	}
 }
+
 func searchKey(arr *[]*Pair, key, l, r int) int {
 	if l > r {
 		return -1
