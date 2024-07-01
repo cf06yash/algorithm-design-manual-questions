@@ -107,6 +107,10 @@ func CreateLinkedList(arr []int, loopAfter int) *LinkedList {
 }
 
 func main() {
+	/*
+		Determine whether a linked list contains a loop as quickly as possible without
+		using any extra storage. Also, identify the location of the loop
+	*/
 	var arr []int = []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	ll := CreateLinkedList(arr, 6)
 	var x *Node = ll.FindLoop()
