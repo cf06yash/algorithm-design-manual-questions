@@ -21,7 +21,7 @@ type Query struct {
 
 func minRangeQuery(tree *[]int, low, high, qlow, qhigh, pos int) int {
 	if low > high {
-		return -1
+		return math.MaxInt
 	}
 	//total
 	if qlow <= low && qhigh >= high {
