@@ -6,7 +6,7 @@ func partition(arr *[]int, l, h int) int {
 	firsthigh := h
 	p := l
 
-	for i := p + 1; i <= h; i++ {
+	for i := h; i > p; i-- {
 		if (*arr)[i] > (*arr)[p] {
 			(*arr)[i], (*arr)[firsthigh] = (*arr)[firsthigh], (*arr)[i]
 			firsthigh--
@@ -65,7 +65,7 @@ func main() {
 		times are distinct (no ties).
 	*/
 
-	startTimes := []int{1, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+	startTimes := []int{18, 16, 12, 14, 1, 4, 8, 6, 20, 10}
 	endTimes := []int{3, 7, 9, 11, 13, 15, 17, 19, 21, 23}
 
 	QuickSort(&startTimes, 0, len(startTimes)-1)
