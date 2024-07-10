@@ -58,6 +58,9 @@ func main() {
 	QuickSort(&intervals, 0, len(intervals)-1)
 	fmt.Printf("Sorted Intervals: %v\n", intervals)
 
+	if len(intervals) == 0 {
+		return
+	}
 	var maxPoint = intervals[0].start
 	var maxCount = 1
 	count := 0
@@ -73,16 +76,6 @@ func main() {
 			count--
 			j++
 		}
-		if maxCount < count {
-			maxPoint = point
-			maxCount = count
-		}
-	}
-
-	for ; i < len(intervals); i++ {
-		point := intervals[i].start
-		count++
-		i++
 		if maxCount < count {
 			maxPoint = point
 			maxCount = count
